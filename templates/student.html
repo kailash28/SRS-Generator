@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SRS-g</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+.fill{
+	font-size: 30px;
+	color: #EA783B;
+}
+
+	
+
+	input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+body  {
+    background-image: url("static/img/re.jpg");
+    
+
+}
+
+input[type=submit] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<center><b><i class="fill">Fill Specifications :</i></b></center>
+		</div>
+	</div>
+</div>
+<hr>
+	<div class="container">
+		<div class="row">
+			 <div class="col-xs-12">
+			 	<form method="post" action="{{ url_for('hello') }}">
+              <label for="youremail"><h2>1. Introduction:</h2></label>
+                 <!--  <input type="text" name="Introduction" placeholder="introduction of project" required />--><br /> 
+		          <label for="youremail">1.1 Purpose :</label>
+                  <input type="text" name="Purpose" placeholder="identify purpose of SRS and intended audience" required /><br />
+              <label for="youremail">1.2 Scope :</label>
+                  <input type="text" name="Scope" placeholder="Describe application of Software" required /><br />
+		          <label for="youremail">1.3 Definitions, Acronyms and Abbreviations :</label>
+                  <input type="text" name="daa" placeholder="define all terms here" required /><br />
+               <label for="youremail">1.4 References :</label>
+                  <input type="text" name="ref" placeholder="define all terms here" required /><br />
+			       <label for="youremail">1.5 Overview :</label>
+                  <input type="text" name="Overview" placeholder="Describe how SRS is organised"  required /><br />
+		          <label for="youremail"><h2>2. The Overall Description :</h2></label>
+                 <!-- <input type="text" name="tod" placeholder="description here" required />--><br />
+			        <label for="youremail">2.1 Product Perspective</label>
+                  <input type="text" name="pp" placeholder="put product into perspective with other related products here" required /><br />
+			        <label for="youremail">2.1.1 System Interfaces :</label>
+                  <input type="text" name="sysi" placeholder="respective interface description here" required /><br />
+			         <label for="youremail">2.1.2 Hardware Interfaces :</label>
+                  <input type="text" name="hi" placeholder="respective interface description here" required /><br />
+			         <label for="youremail">2.1.3 Software Interfaces :</label>
+                  <input type="text" name="softi" placeholder="respective interface description here" required /><br />
+			         <label for="youremail">2.1.4 Communication Interfaces :</label>
+                  <input type="text" name="ci" placeholder="respective interface description here" required /><br />
+			         <label for="youremail">2.1.5 Memory Constraints :</label>
+                  <input type="text" name="mc" placeholder="limits on Memory here" required /><br />
+			         <label for="youremail">2.1.6 Site Adaptation requirements :</label>
+                  <input type="text" name="sar" placeholder="intialization sequences that are specific to given site" required /><br />
+			         <label for="youremail">2.2 Product functions :</label>
+                  <input type="text" name="pf" placeholder="summary of major software functions here" required /><br />
+		        	<label for="youremail">2.3 User Characteristics :</label>
+                  <input type="text" name="uc" placeholder="general characteristics of intended user here" required /><br />
+		        	<label for="youremail">2.4 Constraints :</label>
+                  <input type="text" name="cons" placeholder="define limits here" required /><br />
+			         <label for="youremail">2.5 Assumptions and Dependencies :</label>
+                  <input type="text" name="aad" placeholder="all factors that affect the requirements stated in SRS here" required /><br />
+			        <label for="youremail">2.6 Apportioning of requirements :</label>
+                  <input type="text" name="aor" placeholder="state requirements that may be delayed here"  required /><br />
+			        <label for="youremail"><h2>3. Specific Requirements :</h2></label>
+                 <!-- <input type="text" name="sr" placeholder="Specific requirement here" required />--><br />
+              <label for="youremail">3.1 External interfaces :</label>
+                  <input type="text" name="ei" placeholder="description of all inputs into and outputs from system" required /><br />
+              <label for="youremail">3.2 Functions :</label>
+                  <input type="text" name="funcs" placeholder="fundamental actions that must take place in software" required /><br />
+              <label for="youremail">3.3 Performance Requirements :</label>
+                  <input type="text" name="pr" placeholder="static and dynamic numerical requirements placed on the software" required /><br />
+              <label for="youremail">3.4 Logical database requirements</label>
+                  <input type="text" name="ldr" placeholder="logical requirements for any Information that is to be placed into database" required /><br />
+              <label for="youremail">3.5 Design Constraints :</label>
+                  <input type="text" name="dc" placeholder="specify design Constraints that can be imposed by other standards" required /><br />
+              <label for="youremail">3.6 Software system attributes :</label>
+                  <input type="text" name="ssa" placeholder="quality attributes of software here" required /><br />
+              <label for="youremail">3.6.1 Reliability :</label>
+                  <input type="text" name="rel" placeholder="factors required to establish required Reliability" required /><br />
+              <label for="youremail">3.6.2 Availability :</label>
+                  <input type="text" name="avail" placeholder="factors required to guarantee a defined availability" required /><br />
+              <label for="youremail">3.6.3 Security :</label>
+                  <input type="text" name="sec" placeholder="factors that would protect the software" required /><br />
+              <label for="youremail">3.6.4 Maintainability :</label>
+                  <input type="text" name="main" placeholder="attributes that relate to ease of maintenance" required /><br />
+              <label for="youremail">3.6.5 Portability :</label>
+                  <input type="text" name="port" placeholder="attributes that relate to ease of parting software" required /><br />
+              <label for="youremail">3.7 Organizing the Specific Requirements :</label>
+                  <input type="text" name="otsr" placeholder="different organizations of requirements" required /><br />
+              <label for="youremail">3.7.1 System Mode :</label>
+                  <input type="text" name="sm" placeholder="Mode of operation here" required /><br />
+              <label for="youremail">3.7.2 User Class :</label>
+                  <input type="text" name="uc1" placeholder="different sets of functions for classes of users" required /><br />
+              <label for="youremail">3.7.3 Objects :</label>
+                  <input type="text" name="obj" placeholder="real world entites that have a counterpart within the system" required /><br />
+              <label for="youremail">3.7.4 Feature :</label>
+                  <input type="text" name="f" placeholder="externally desired service by the system" required /><br />
+              <label for="youremail">3.7.5 Stimulus :</label>
+                  <input type="text" name="sti" placeholder="description of functions in terms of stimuli" required /><br />
+              <label for="youremail">3.7.6 Response :</label>
+                  <input type="text" name="res" placeholder="description of functions in support of generation of response" required /><br />
+              <label for="youremail">3.7.7 Functional Heirarchy :</label>
+                  <input type="text" name="fh" placeholder="functionality can be organised into heirarchy of functions" required /><br />
+              <label for="youremail">3.8 Additional Comments :</label>
+                  <input type="text" name="ac" placeholder="add comments" required /><br />
+              <label for="youremail"><h2> 4. Change Management Process :</h2></label>
+                  <input type="text" name="cmp1" placeholder="change process to log and evaluate SRS" required /><br />
+              <label for="youremail"><h2>5. Document Approval :</h2></label>
+                  <input type="text" name="da" placeholder="identify approvers of SRS" required /><br />
+              <label for="youremail"><h2>5. Supporting Information :</h2></label>
+                  <input type="text" name="si" placeholder="includes index and appendices" required /><br/>
+                  <center><input type="submit" /></center>
+                </form>
+			 </div>
+		</div>
+	</div>
+
+</body>
+</html>
